@@ -1,7 +1,7 @@
 'use strict';
 var React = require('react')
   , locale = require('../locale').confirm
-  , Dialog = require('./Dialog.jsx');
+  , Dialog = require('./DialogOverlay.jsx');
 
 var ConfirmTrigger = React.createClass({
 

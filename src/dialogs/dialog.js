@@ -2,7 +2,7 @@
 var React = require('React')
 //  , cloneWithProps = require('react-clonewithprops')
   , Promise = require('promiz')
-  , Dialog =  require('../components/Dialog.jsx')
+  , Dialog =  require('../components/DialogOverlay.jsx')
   , Layer   = require('react-bootstrap-modal/lib/Layer');
 
 module.exports = dialog

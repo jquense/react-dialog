@@ -1,7 +1,7 @@
 {
-  "name": "react-dialogs",
-  "version": "0.3.0",
-  "description": "Component and programmatic replacements for Alert and Confirm, and anything Dialog need",
+  "name": "react-dialog",
+  "version": "1.0.0",
+  "description": "Dead simple flexible dialogs in React, comes with async `alert` and `confirm`",
   "main": "index.js",
   "author": {
     "name": "Jason",

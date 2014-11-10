@@ -1,45 +1,30 @@
- 'use strict';
+'use strict';
 var React = require('react')
-  , Modal = require('react-bootstrap-modal/lib/Modal')
-  , cloneWithProps = require('react-clonewithprops');
+  , DialogOverlay = require('./DialogOverlay.jsx');
 
-var Alert = React.createClass({
+var Dialog = React.createClass({
 
   mixins: [
-    require('../DialogMixin'),
+    require('react-bootstrap-modal/lib/OverlayMixin')
   ],
 
-  getDefaultProps() {
-    return {
-      actions: []
-    }
+  propTypes: {
+    show:     React.PropTypes.bool,
+    onAction: React.PropTypes.func.isRequired,
   },
 
-  render() {
-    var { 
+  renderOverlay() {
+    var {
         children
-      , actions
-      , ...props } = this.props
+      , ...props } = this.props;
 
-    props.show = this.visible()
+    return <DialogOverlay {...props}>{ children }</DialogOverlay>
+  },
 
-    return (
-      <Modal {...props }
-        backdrop='static'
-        closeButton={false}
-        onRequestHide={this._action.bind(null, 'cancel')}>
-        <div className="modal-body">
-          { children }
-        </div>
-        { actions && actions.length && 
-          <div className="modal-footer">
-            { actions.map( (b, i) => cloneWithProps(this.renderAction(b), { key: i })) }
-          </div>
-        }
-      </Modal>
-    )
+  render(){
+    return null
   }
 
 });
 
-module.exports = Alert;
+module.exports = Dialog;

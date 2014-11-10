@@ -2,7 +2,7 @@
 
 var React = require('react')
   , locale = require('../locale').alert
-  , Dialog = require('./Dialog.jsx');
+  , Dialog = require('./DialogOverlay.jsx');
 
 var AlertTrigger = React.createClass({
 
