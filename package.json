@@ -1,7 +1,7 @@
 {
   "name": "react-dialog",
   "version": "1.0.0",
-  "description": "Dead simple flexible dialogs in React, comes with async `alert` and `confirm`",
+  "description": "Dead simple flexible dialogs in React, comes with async `alert` and `confirm` Components",
   "main": "index.js",
   "author": {
     "name": "Jason",
