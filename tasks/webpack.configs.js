@@ -1,12 +1,4 @@
-var path = require('path')
-  , webpack = require('webpack')
-  , pkg = require("../package.json")
-  , ProdDefine = new webpack.DefinePlugin({
-      "process.env": {
-        // This has effect on the react lib size
-        "NODE_ENV": JSON.stringify("production")
-      }
-    })
+var path = require('path');
 
 module.exports = {
 

@@ -6,6 +6,7 @@ require('../src/bootstrap-buttons.less')
 var React   = require('react')
   , Alert   = require('../src/components/Alert.jsx')
   , Confirm = require('../src/components/Confirm.jsx')
+  , Dialog = require('../src/components/Dialog.jsx')
   , alertDialog   = require('../src/dialogs/alert')
   , confirmDialog = require('../src/dialogs/confirm')
   ;
@@ -30,14 +31,36 @@ var Container = React.createClass({
         <Confirm show={this.state.confirm} onAction={toggle.bind(this, 'confirm')}>Hello! Yes or No?</Confirm>
         <Alert show={this.state.alert} onAction={toggle.bind(this, 'alert')}>Hello!</Alert>
 
+        <Dialog show={this.state.alert}>
+          <form>
+            <div className='form-group'>
+              <label className='control-label col-sm-3'>name</label>
+              <div className='col-sm-8'>
+                <input type='text' className='form-control' />
+              </div>
+            </div>
+            <div className='form-group'>
+              <label className='control-label col-sm-3'>birthday</label>
+              <div className='col-sm-8'>
+                <input type='date' />
+              </div>
+            </div>
+            <div className='form-group'>
+              <div className='col-sm-offset-3 col-sm-8'>
+                <button type='button' className='btn btn-default'>check</button>
+              </div>
+            </div>
+          </form>
+          
+        </Dialog>
       </div>
     );
 
-    function toggle(type, anseer){
+    function toggle(type, answer){
       var st ={}
       st[type] = !this.state[type]
       this.setState(st)
-      console.log(anseer)
+      console.log(answer)
     }
 
     function alert(){
