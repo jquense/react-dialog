@@ -1,4 +1,4 @@
-react-dialogs
+react-dialog
 ======================
 
 Dirt simple components and mixins for creating flexible dialogs. Comes with async replacements for `alert()` and 
