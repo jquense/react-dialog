@@ -12,7 +12,7 @@ You have two options for displaying modals
 ### Triggers
 
 ```javascript
-var Alert = require('react-dialogs/lib/components/Alert')
+var Alert = require('react-dialog/lib/components/Alert')
 
 var Component = react.createClass({
 
@@ -39,7 +39,7 @@ Triggers allow you to define your dialogs inline in your render method, this let
 Sometimes it doesn't make sense to call a dialog in the flow of your component hierarchy. In which case you can use a more traditional approach of programatically rendering and destroying the dialog. Dialog function calls return a promise that fulfills when the user makes a choice.
 
 ```javascript
-var alert = require('react-dialogs/lib/dialogs/alert')
+var alert = require('react-dialog/lib/dialogs/alert')
 
 var Component = react.createClass({
     
